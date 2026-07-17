@@ -1,0 +1,198 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="/listings">
+            <i class="fa-regular fa-compass"></i>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <!-- ================= Desktop Navbar ================= -->
+
+        <div class="collapse navbar-collapse d-none d-md-flex">
+
+            <!-- Left -->
+            <div class="navbar-nav">
+                <a class="nav-link" href="/listings">
+                    <i class="fa-solid fa-house me-1"></i>
+                    Explore
+                </a>
+            </div>
+
+            <!-- Search -->
+            <form
+                class="d-flex search-form mx-auto"
+                action="/listings"
+                method="GET">
+
+                <input
+    class="form-control me-2"
+    type="search"
+    placeholder="Search destinations"
+    name="search"
+   value="<%= typeof search !== 'undefined' ? search : '' %>">
+
+                <button
+                    class="btn btn-outline-danger"
+                    type="submit">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </form>
+
+            <!-- Right -->
+
+            <div class="navbar-nav ms-auto">
+
+                <a class="nav-link add-listing-link" href="/listings/new">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add </span>
+                </a>
+
+                <% if(!currUser){ %>
+
+                    <a class="nav-link" href="/signup">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Signup
+                    </a>
+
+                    <a class="nav-link" href="/login">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Login
+                    </a>
+
+                <% } %>
+
+                <% if(currUser){ %>
+
+                    <a class="nav-link" href="/logout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Logout
+                    </a>
+
+                <% } %>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Mobile Menu ================= -->
+
+        <div
+            class="offcanvas offcanvas-end d-md-none"
+            tabindex="-1"
+            id="mobileMenu">
+
+            <div class="offcanvas-header">
+
+                <h4 class="offcanvas-title">
+
+                    <i class="fa-regular fa-compass text-danger"></i>
+
+                    Wonderlust
+
+                </h4>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas">
+                </button>
+
+            </div>
+
+            <div class="offcanvas-body">
+
+                <!-- Search -->
+
+                <form
+                    class="mobile-search"
+                    action="/listings"
+                    method="GET">
+
+                    <input
+                        class="form-control"
+                        type="search"
+                        placeholder="Search destinations"
+                        name="search">
+
+                    <button
+                        class="btn btn-danger w-100 mt-2">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Search
+
+                    </button>
+
+                </form>
+
+                <hr>
+
+                <a class="nav-link" href="/listings">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Explore
+
+                </a>
+
+                <a class="nav-link" href="/listings/new">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Listing
+
+                </a>
+
+                <% if(!currUser){ %>
+
+                    <a class="nav-link" href="/signup">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Signup
+
+                    </a>
+
+                    <a class="nav-link" href="/login">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Login
+
+                    </a>
+
+                <% } %>
+
+                <% if(currUser){ %>
+
+                    <a class="nav-link text-danger" href="/logout">
+
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                        Logout
+
+                    </a>
+
+                <% } %>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>

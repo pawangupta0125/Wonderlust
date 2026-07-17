@@ -1,0 +1,142 @@
+<%- layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+
+        <h3>Edit Listing</h3>
+
+        <form
+            method="POST"
+            action="/listings/<%= listing._id %>?_method=PUT"
+            class="needs-validation"
+            novalidate
+            enctype="multipart/form-data">
+
+            <!-- Title -->
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="listing[title]"
+                    value="<%= listing.title %>"
+                    required>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea
+                    class="form-control"
+                    name="listing[description]"
+                    rows="3"
+                    required><%= listing.description %></textarea>
+            </div>
+
+            <!-- Current Image -->
+            <div class="mb-3">
+                <label class="form-label">Current Image</label><br>
+
+                <img
+                    src="<%= listing.image.url %>"
+                    alt="listing"
+                    style="width:250px;border-radius:12px;">
+            </div>
+
+            <!-- Upload Image -->
+            <div class="mb-3">
+                <label class="form-label">Upload New Image</label>
+                <input
+                    type="file"
+                    class="form-control"
+                    name="listing[image]">
+            </div>
+
+            <!-- Price -->
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input
+                    type="number"
+                    class="form-control"
+                    name="listing[price]"
+                    value="<%= listing.price %>"
+                    required>
+            </div>
+
+            <!-- Category -->
+            <div class="mb-3">
+                <label class="form-label">Category</label>
+
+                <select
+                    class="form-select"
+                    name="listing[category]"
+                    required>
+
+                    <% const currentCategory = listing.category || "Trending"; %>
+
+                    <option value="Trending" <%= currentCategory==="Trending"?"selected":"" %>>Trending</option>
+
+                    <option value="Rooms" <%= currentCategory==="Rooms"?"selected":"" %>>Rooms</option>
+
+                    <option value="Castles" <%= currentCategory==="Castles"?"selected":"" %>>Castles</option>
+
+                    <option value="Pools" <%= currentCategory==="Pools"?"selected":"" %>>Pools</option>
+
+                    <option value="Cities" <%= currentCategory==="Cities"?"selected":"" %>>Cities</option>
+
+                    <option value="Mountains" <%= currentCategory==="Mountains"?"selected":"" %>>Mountains</option>
+
+                    <option value="Cafe" <%= currentCategory==="Cafe"?"selected":"" %>>Cafe</option>
+
+                    <option value="Camping" <%= currentCategory==="Camping"?"selected":"" %>>Camping</option>
+
+                    <option value="Farms" <%= currentCategory==="Farms"?"selected":"" %>>Farms</option>
+
+                    <option value="Arctic" <%= currentCategory==="Arctic"?"selected":"" %>>Arctic</option>
+
+                    <option value="Beaches" <%= currentCategory==="Beaches"?"selected":"" %>>Beaches</option>
+
+                    <option value="Waterfall" <%= currentCategory==="Waterfall"?"selected":"" %>>Waterfall</option>
+
+                    <option value="Temples" <%= currentCategory==="Temples"?"selected":"" %>>Temples</option>
+
+                    <option value="Vihara" <%= currentCategory==="Vihara"?"selected":"" %>>Vihara</option>
+
+                </select>
+            </div>
+
+            <!-- Location & Country -->
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Location</label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="listing[location]"
+                        value="<%= listing.location %>"
+                        required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Country</label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="listing[country]"
+                        value="<%= listing.country %>"
+                        required>
+                </div>
+
+            </div>
+
+            <button class="btn btn-danger">
+                Update Listing
+            </button>
+
+        </form>
+
+    </div>
+</div>

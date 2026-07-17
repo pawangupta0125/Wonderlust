@@ -1,0 +1,195 @@
+<%- layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-lg-8 col-md-10 col-12 mx-auto">
+
+        <h3 class="mb-4">Add New Listing</h3>
+
+        <form
+            method="POST"
+            action="/listings"
+            class="needs-validation"
+            novalidate
+            enctype="multipart/form-data">
+
+            <!-- Title -->
+
+            <div class="mb-3">
+
+                <label for="title" class="form-label">Title</label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="title"
+                    name="listing[title]"
+                    placeholder="Enter title"
+                    required>
+
+                <div class="invalid-feedback">
+                    Please enter a title.
+                </div>
+
+            </div>
+
+            <!-- Description -->
+
+            <div class="mb-3">
+
+                <label for="description" class="form-label">Description</label>
+
+                <textarea
+                    class="form-control"
+                    id="description"
+                    name="listing[description]"
+                    rows="3"
+                    required></textarea>
+
+                <div class="invalid-feedback">
+                    Please enter description.
+                </div>
+
+            </div>
+
+            <!-- Image -->
+
+            <div class="mb-3">
+
+                <label for="image" class="form-label">
+                    Upload Listing Image
+                </label>
+
+                <input
+                    type="file"
+                    class="form-control"
+                    id="image"
+                    name="listing[image]"
+                    required>
+
+                <div class="invalid-feedback">
+                    Please upload an image.
+                </div>
+
+            </div>
+
+            <!-- Price -->
+
+            <div class="mb-3">
+
+                <label for="price" class="form-label">Price</label>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    id="price"
+                    name="listing[price]"
+                    placeholder="Enter price"
+                    required>
+
+                <div class="invalid-feedback">
+                    Please enter price.
+                </div>
+
+            </div>
+
+            <!-- Location & Country -->
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                    <label for="location" class="form-label">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="location"
+                        name="listing[location]"
+                        placeholder="Enter location"
+                        required>
+
+                    <div class="invalid-feedback">
+                        Please enter location.
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <label for="country" class="form-label">
+                        Country
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="country"
+                        name="listing[country]"
+                        placeholder="Enter country"
+                        required>
+
+                    <div class="invalid-feedback">
+                        Please enter country.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Category -->
+
+            <div class="mb-3">
+
+                <label for="category" class="form-label">
+
+                    Category
+
+                </label>
+
+                <select
+                    class="form-select"
+                    id="category"
+                    name="listing[category]"
+                    required>
+
+                    <option value="" selected disabled>
+                        Select Category
+                    </option>
+
+                    <option value="Trending">🔥 Trending</option>
+                    <option value="Rooms">🛏 Rooms</option>
+                    <option value="Castles">🏰 Castles</option>
+                    <option value="Pools">🏊 Pools</option>
+                    <option value="Cities">🏙 Cities</option>
+                    <option value="Mountains">🏔 Mountains</option>
+                    <option value="Cafe">☕ Cafe</option>
+                    <option value="Camping">🏕 Camping</option>
+                    <option value="Farms">🐄 Farms</option>
+                    <option value="Arctic">🧊 Arctic</option>
+                    <option value="Beaches">🏖 Beaches</option>
+                    <option value="Waterfall">🌊 Waterfall</option>
+                    <option value="Temples">🛕 Temples</option>
+                    <option value="Vihara">🏯 Vihara</option>
+
+                </select>
+
+                <div class="invalid-feedback">
+                    Please select a category.
+                </div>
+
+            </div>
+
+            <!-- Button -->
+
+            <button class="btn btn-dark add-btn mb-3">
+
+                Add Listing
+
+            </button>
+
+        </form>
+
+    </div>
+</div>

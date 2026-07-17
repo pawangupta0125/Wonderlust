@@ -1,0 +1,677 @@
+/* ================= GOOGLE FONT ================= */
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    flex:1;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:5rem;
+    background:#fff;
+}
+
+.fa-compass{
+    color:#fe424d;
+    font-size:2rem;
+}
+
+.nav-link{
+    color:#222 !important;
+}
+
+.search-form{
+    width:40%;
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+}
+
+.search-form input{
+    border-radius:2rem;
+}
+
+.search-form button{
+    border-radius:2rem;
+    white-space:nowrap;
+}
+/* ================= FOOTER ================= */
+
+.footer{
+    width:100%;
+    background:#f8f9fa;
+    border-top:1px solid #e5e5e5;
+    margin-top:3rem;
+}
+
+.footer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:2rem 1rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+/* Icons */
+
+.footer-socials{
+
+    display:flex;
+
+    gap:1.3rem;
+
+}
+
+.footer-socials a{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#222;
+
+    text-decoration:none;
+
+    font-size:1.3rem;
+
+    transition:.3s;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.footer-socials a:hover{
+
+    background:#fe424d;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+/* Copyright */
+
+.footer-brand{
+
+    font-size:1rem;
+
+    color:#444;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+
+/* Links */
+
+.footer-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+.footer-links a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#fe424d;
+
+}
+
+/* Developer */
+
+.footer-developer{
+
+    color:#666;
+
+    font-size:.95rem;
+
+}
+
+.footer-developer strong{
+
+    color:#222;
+
+}
+
+.footer-developer i{
+
+    color:#fe424d;
+
+    animation:heartbeat 1.5s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.footer{
+
+margin-top:2rem;
+
+}
+
+.footer-container{
+
+padding:1.5rem 1rem;
+
+}
+
+.footer-socials{
+
+gap:1rem;
+
+}
+
+.footer-socials a{
+
+width:40px;
+
+height:40px;
+
+font-size:1.1rem;
+
+}
+
+.footer-links{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.footer-brand{
+
+font-size:.9rem;
+
+}
+
+.footer-developer{
+
+font-size:.85rem;
+
+}
+
+}
+
+/* ================= LISTING CARDS ================= */
+
+.listing-card{
+    border:none !important;
+    margin-bottom:2rem;
+    transition:.3s;
+}
+
+.listing-card:hover{
+    transform:translateY(-5px);
+}
+
+.card-img-top{
+    width:100%;
+    height:18rem;
+    object-fit:cover;
+    border-radius:1rem !important;
+}
+
+.card-img-overlay{
+    opacity:0;
+    transition:.2s;
+}
+
+.card-img-overlay:hover{
+    opacity:.15;
+    background:#fff;
+}
+
+.card-body{
+    padding:.8rem !important;
+}
+
+.card-text{
+    font-weight:500;
+}
+
+.listing-link{
+    text-decoration:none;
+    color:black;
+}
+
+.listing-link:hover{
+    color:black;
+}
+
+/* ================= BUTTON ================= */
+
+.add-btn,
+.edit-btn{
+    background:#fe424d !important;
+    border:none !important;
+}
+
+.add-btn:hover,
+.edit-btn:hover{
+    background:#dc3545 !important;
+}
+
+/* ================= SHOW PAGE ================= */
+
+.show-card{
+    padding:0 !important;
+}
+
+.show-card .card-body{
+    padding:1rem !important;
+}
+
+.show-img{
+    width:100%;
+    height:40vh;
+    max-height:500px;
+    object-fit:cover;
+}
+
+.review-card{
+    width:18rem;
+}
+
+/* ================= FILTER SECTION ================= */
+
+.filter-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem 0 2rem;
+}
+
+/* Filters */
+
+#filters{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+
+    flex: 1;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+#filters::-webkit-scrollbar{
+    display: none;
+}
+
+/* Single Filter */
+
+.filter{
+    flex: 0 0 auto;
+    min-width: 75px;
+
+    text-align: center;
+
+    opacity: .7;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.filter:hover{
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.filter i{
+    font-size: 1.25rem;
+}
+
+.filter p{
+    margin-top: .4rem;
+    margin-bottom: 0;
+    font-size: .82rem;
+}
+
+/* Toggle */
+
+.tax-info{
+    display: none;
+}
+
+.tax-switch{
+
+    flex-shrink: 0;
+
+    border: 1px solid #ddd;
+
+    border-radius: 16px;
+
+    background: white;
+
+    padding: .9rem 1.2rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* Filter Links */
+
+.filter-link{
+    text-decoration: none;
+    color: #222;
+}
+
+.filter-link:hover{
+    color: #222;
+    text-decoration: none;
+}
+
+/* Active Filter */
+
+.filter.active{
+
+    color:#fe424d;
+
+    opacity:1;
+
+}
+
+.filter.active i{
+
+    color:#fe424d;
+
+}
+
+.filter.active p{
+
+    font-weight:700;
+
+}
+
+.filter.active::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:3px;
+
+    background:#fe424d;
+
+    margin-top:6px;
+
+    border-radius:10px;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .filter-wrapper{
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 1rem;
+
+    }
+
+    #filters{
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        padding-bottom: .4rem;
+
+    }
+
+    .filter{
+
+        min-width: 80px;
+
+    }
+
+    .tax-switch{
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin: 0;
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .search-form{
+        width:100%;
+        margin:1rem 0;
+    }
+
+    .navbar-nav{
+        margin-top:.5rem;
+    }
+
+    .tax-switch{
+        width:100%;
+    }
+
+    .show-img{
+        height:35vh;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .card-img-top{
+        height:16rem;
+    }
+
+    .show-img{
+        height:30vh;
+    }
+
+    .review-card{
+        width:100%;
+    }
+
+    .filter{
+        min-width:60px;
+    }
+
+    .filter p{
+        font-size:.75rem;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .navbar{
+        height:auto;
+        padding:.5rem;
+    }
+
+    .search-form{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .search-form input,
+    .search-form button{
+        width:100%;
+    }
+
+    .card-img-top{
+        height:14rem;
+    }
+
+    .show-img{
+        height:25vh;
+    }
+
+    .f-info{
+        padding:1rem;
+    }
+
+}
+/* ================= Add Listing ================= */
+
+.add-listing-link{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+}
+
+.add-listing-link i{
+    font-size:1rem;
+}
+
+@media(max-width:768px){
+
+    .add-listing-link{
+        justify-content:flex-start;
+    }
+
+}
+
+/* ================= OFFCANVAS ================= */
+
+.offcanvas{
+    width:320px;
+    background:#fff;
+    border-radius:0;
+    box-shadow:-8px 0 20px rgba(0,0,0,0.15);
+}
+
+.offcanvas-header{
+    border-bottom:1px solid #eee;
+    padding:1rem 1.2rem;
+}
+
+.offcanvas-title{
+    font-weight:700;
+    font-size:1.3rem;
+}
+
+.offcanvas-body{
+    padding:1.2rem;
+}
+
+.offcanvas-body .nav-link{
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    padding:.9rem 1rem;
+    margin:.4rem 0;
+    border-radius:12px;
+    font-size:1rem;
+    font-weight:500;
+    transition:.3s;
+}
+
+.offcanvas-body .nav-link:hover{
+    background:#f8f9fa;
+    color:#fe424d !important;
+}
+
+.mobile-search{
+    margin-bottom:1rem;
+}
+
+.mobile-search input{
+    border-radius:30px;
+}
+
+.mobile-search button{
+    border-radius:30px;
+}
